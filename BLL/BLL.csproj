@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,23 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounts\AdvanceService.cs" />
+    <Compile Include="Affair.cs" />
     <Compile Include="BaseService.cs" />
     <Compile Include="Production\StockapplyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cashier\" />
-    <Folder Include="CustomerRelationship\" />
-    <Folder Include="Finance\" />
-    <Folder Include="Mes\" />
-    <Folder Include="PersonnelWages\" />
-    <Folder Include="PublicInformation\" />
-    <Folder Include="Purchasing\" />
-    <Folder Include="ReportForm\" />
-    <Folder Include="Sale\" />
-    <Folder Include="SolidCapital\" />
-    <Folder Include="Stock\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{1664fa3e-59e5-4032-96a1-23e50cac578a}</Project>
@@ -73,6 +63,20 @@
       <Project>{afdd7b3b-df46-4773-ad17-cc1a6928c37d}</Project>
       <Name>MysqlModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts\t.txt" />
+    <Content Include="Cashier\t.txt" />
+    <Content Include="CustomerRelationship\t.txt" />
+    <Content Include="Finance\t.txt" />
+    <Content Include="Mes\t.txt" />
+    <Content Include="PersonnelWages\t.txt" />
+    <Content Include="PublicInformation\t.txt" />
+    <Content Include="Purchasing\t.txt" />
+    <Content Include="ReportForm\t.txt" />
+    <Content Include="Sale\t.txt" />
+    <Content Include="SolidCapital\t.txt" />
+    <Content Include="Stock\t.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -52,20 +52,7 @@
     <Compile Include="Production\StockapplyDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Accounts\" />
-    <Folder Include="Cashier\" />
-    <Folder Include="CustomerRelationship\" />
-    <Folder Include="Finance\" />
-    <Folder Include="Mes\" />
-    <Folder Include="PersonnelWages\" />
-    <Folder Include="PublicInformation\" />
-    <Folder Include="Purchasing\" />
-    <Folder Include="ReportForm\" />
-    <Folder Include="Sale\" />
-    <Folder Include="SolidCapital\" />
-    <Folder Include="Stock\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{F6DA2F70-24E6-451F-8255-804F8B03B79C}</Project>
@@ -79,6 +66,21 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts\t.txt" />
+    <Content Include="Cashier\t.txt" />
+    <Content Include="CustomerRelationship\t.txt" />
+    <Content Include="Finance\t.txt" />
+    <Content Include="Mes\t.txt" />
+    <Content Include="PersonnelWages\t.txt" />
+    <Content Include="Production\t.txt" />
+    <Content Include="PublicInformation\t.txt" />
+    <Content Include="Purchasing\t.txt" />
+    <Content Include="ReportForm\t.txt" />
+    <Content Include="Sale\t.txt" />
+    <Content Include="SolidCapital\t.txt" />
+    <Content Include="Stock\t.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

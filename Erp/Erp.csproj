@@ -171,6 +171,19 @@
     <Compile Include="RegisterAutofac\RegisterAutofacForSingle.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\erp.sql" />
+    <Content Include="App_Data\命名.txt" />
+    <Content Include="Controllers\Cashier\t.txt" />
+    <Content Include="Controllers\CustomerRelationship\t.txt" />
+    <Content Include="Controllers\Finance\t.txt" />
+    <Content Include="Controllers\Mes\t.txt" />
+    <Content Include="Controllers\PersonnelWages\t.txt" />
+    <Content Include="Controllers\Production\t.txt" />
+    <Content Include="Controllers\PublicInformation\t.txt" />
+    <Content Include="Controllers\ReportForm\t.txt" />
+    <Content Include="Controllers\Sale\t.txt" />
+    <Content Include="Controllers\SolidCapital\t.txt" />
+    <Content Include="Controllers\Stock\t.txt" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -181,18 +194,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Cashier\" />
-    <Folder Include="Controllers\CustomerRelationship\" />
-    <Folder Include="Controllers\Finance\" />
-    <Folder Include="Controllers\Mes\" />
-    <Folder Include="Controllers\PersonnelWages\" />
-    <Folder Include="Controllers\Production\" />
-    <Folder Include="Controllers\PublicInformation\" />
-    <Folder Include="Controllers\ReportForm\" />
-    <Folder Include="Controllers\Sale\" />
-    <Folder Include="Controllers\SolidCapital\" />
-    <Folder Include="Controllers\Stock\" />
     <Folder Include="Filer\" />
     <Folder Include="Models\" />
   </ItemGroup>
