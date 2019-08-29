@@ -4,20 +4,28 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Currency.FsLayUiModel;
+using Erp.Models.Production;
 using IBLL;
-using IBLL.Production;
+using IBLL.Purchasing;
 using MysqlModel;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Erp.Controllers.Purchasing
 {
+    [RoutePrefix("api/Stockapply")]
     /// <summary>
     /// 采购请购单
     /// </summary>
-    public class StockapplyController : ApiController
+    public class StockapplyController : BaseApiController<stockapply>
     {
         private readonly IStockapplyService _StockapplyService = null;
+
+
         public StockapplyController(IStockapplyService stockapplyService)
         {
+            base._BaseService = stockapplyService;
             this._StockapplyService = stockapplyService;
         }
 
@@ -54,7 +62,7 @@ namespace Erp.Controllers.Purchasing
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
 
@@ -66,6 +74,36 @@ namespace Erp.Controllers.Purchasing
         public List<stockapply> ListStockapply()
         {
             return _StockapplyService.ListModels(s => true).ToList();
+        }
+
+       
+        [HttpGet]
+        [HttpPost]
+        /// <summary>
+        /// 新增采购请购单
+        /// </summary>
+        /// <returns></returns>
+        public Result<stockapply> AddStockapply(JObject jObject)
+        {
+            // fsTableData Table表格数据
+            //fsFormData 表单数据
+            dynamic obj = jObject;
+            string tableObj = obj.fsTableData;
+            string fromObj = obj.fsFormData;
+
+            string tableObjJsonStr = Uri.UnescapeDataString(tableObj);
+            string fromObjJsonStr = Uri.UnescapeDataString(fromObj);
+
+            dynamic eneitya = JsonConvert.DeserializeObject<dynamic>(fromObjJsonStr);
+
+            //采购请购单
+           var eneity=  JsonConvert.DeserializeObject<Api_View_Stockapply>(fromObjJsonStr).ToEntity();
+            //请购单详细
+           var eneitydetails = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).ToEntity();
+
+            var test = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).MapToList<stockapplydetails>();
+
+            return _StockapplyService.Add(eneity, eneitydetails);
         }
 
 

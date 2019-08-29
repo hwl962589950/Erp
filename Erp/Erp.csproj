@@ -60,6 +60,9 @@
     <Reference Include="Autofac.Integration.WebApi.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.Owin.4.0.0\lib\net45\Autofac.Integration.WebApi.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -70,6 +73,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
@@ -157,17 +163,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AutoMapper\Class1.cs" />
+    <Compile Include="AutoMapper\MapperExtention.cs" />
     <Compile Include="Controllers\Accounts\AdvanceController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\Purchasing\StockapplyController.cs" />
+    <Compile Include="Controllers\Purchasing\StockapplyDetailsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="FsLayUiModel\AbstractFsData.cs" />
-    <Compile Include="FsLayUiModel\FsData.cs" />
-    <Compile Include="FsLayUiModel\PageFsData.cs" />
-    <Compile Include="FsLayUiModel\Result.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Production\Api_View_Stockapply.cs" />
+    <Compile Include="Models\Production\Api_View_StockapplyDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="RegisterAutofac\RegisterAutofacForSingle.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +194,19 @@
     <Content Include="Controllers\SolidCapital\t.txt" />
     <Content Include="Controllers\Stock\t.txt" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Accounts\t.txt" />
+    <Content Include="Models\Cashier\t.txt" />
+    <Content Include="Models\CustomerRelationship\t.txt" />
+    <Content Include="Models\Finance\t.txt" />
+    <Content Include="Models\Mes\t.txt" />
+    <Content Include="Models\PersonnelWages\t.txt" />
+    <Content Include="Models\Production\t.txt" />
+    <Content Include="Models\PublicInformation\t.txt" />
+    <Content Include="Models\Purchasing\t.txt" />
+    <Content Include="Models\ReportForm\t.txt" />
+    <Content Include="Models\Sale\t.txt" />
+    <Content Include="Models\SolidCapital\t.txt" />
+    <Content Include="Models\Stock\t.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -195,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filer\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -204,6 +225,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{24cf5b8c-ede6-4903-bcee-7b532d446799}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Currency\Currency.csproj">
+      <Project>{35C0F111-C0DF-4FA7-B786-79621A827453}</Project>
+      <Name>Currency</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{06fa5299-426f-4d1e-8cc8-464eb1b87e8a}</Project>

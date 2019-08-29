@@ -10,7 +10,7 @@ namespace BLL
         protected IBaseDAL<T> DAL;
         
 
-
+       
 
         public virtual bool Add(T t)
         {
@@ -28,6 +28,11 @@ namespace BLL
         {
              DAL.Upd(t);
             return DAL.SaveChanges() > 0;
+        }
+
+        public virtual T GetModel(params object[] id)
+        {
+            return DAL.GetModel(id);
         }
 
         public virtual T GetModel(Expression<Func<T, bool>> whereLambda)

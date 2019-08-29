@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IDAL.Production;
 using MysqlModel;
 
-namespace DAL.Production
+namespace IDAL.Purchasing
 {
-   public partial  class StockapplyDAL:BaseDAL<stockapply>, IStockapplyDAL
+    public partial interface IStockapplydetailsDAL:IBaseDAL<stockapplydetails>
     {
-        
-
     }
 }

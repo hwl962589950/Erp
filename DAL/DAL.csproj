@@ -49,8 +49,9 @@
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
     <Compile Include="DbContextFactory.cs" />
-    <Compile Include="Production\StockapplyDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchasing\StockapplyDAL.cs" />
+    <Compile Include="Purchasing\StockapplydetailsDAL.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

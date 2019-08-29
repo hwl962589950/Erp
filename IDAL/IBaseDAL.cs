@@ -22,6 +22,9 @@ namespace IDAL
 
         //查询单个
         T GetModel(Expression<Func<T, bool>> whereLambda);
+        //主键查询单个
+        T GetModel(params object [] id);
+
         //条件查询
         IQueryable<T> ListModels(Expression<Func<T, bool>> whereLambda);
         //分页 排序 查询

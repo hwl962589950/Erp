@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Erp.AutoMapper;
 using TraineesManagement.RegisterAutofac;
 
 namespace Erp
@@ -26,6 +27,8 @@ namespace Erp
             //È¥µôÐòÁÐºÅ
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
 
+            //×¢²á AutoMapper
+            AutoMapperConfig.Excute();
 
 
         }

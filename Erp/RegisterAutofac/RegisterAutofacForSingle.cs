@@ -9,6 +9,9 @@ using System.Web.Http;
 namespace TraineesManagement.RegisterAutofac
 {
 
+    /// <summary>
+    /// IOC注册
+    /// </summary>
     public class AutoFacBootStrapper
     {
         public static void CoreAutoFacInit()

@@ -44,11 +44,19 @@
   <ItemGroup>
     <Compile Include="Accounts\IAdvanceService.cs" />
     <Compile Include="IBaseService.cs" />
-    <Compile Include="Production\IStockapplyService.cs" />
+    <Compile Include="MessageServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchasing\IStockapplyDetailsService.cs" />
+    <Compile Include="Purchasing\IStockapplyService.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Production\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Currency\Currency.csproj">
+      <Project>{35C0F111-C0DF-4FA7-B786-79621A827453}</Project>
+      <Name>Currency</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MysqlModel\MysqlModel.csproj">
       <Project>{afdd7b3b-df46-4773-ad17-cc1a6928c37d}</Project>
       <Name>MysqlModel</Name>

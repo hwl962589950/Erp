@@ -18,8 +18,6 @@ namespace MysqlModel
         public erpEntities()
             : base("name=erpEntities")
         {
-            //设置不验证EF自带 特性
-            base.Configuration.ValidateOnSaveEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

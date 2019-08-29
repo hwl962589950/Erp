@@ -16,6 +16,11 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 请购详情编号  
+        /// </summary>  
+        public string TockapplyDetails { get; set; } 
+    
+        /// <summary>  
         /// 请购单编号  
         /// </summary>  
         public string Appid { get; set; } 

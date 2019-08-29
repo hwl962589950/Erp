@@ -9,7 +9,7 @@ namespace DAL
 {
     public partial class BaseDAL<T> : IBaseDAL<T> where T : class, new()
     {
-        private DbContext db = DbContextFactory.Create();
+        protected DbContext db = DbContextFactory.Create();
 
         /// <summary>
         /// 获取集合
@@ -99,6 +99,11 @@ namespace DAL
         public int SaveChanges()
         {
             return db.SaveChanges();
+        }
+
+        public T GetModel(params object [] id)
+        {
+            return db.Set<T>().Find(id);
         }
     }
 }

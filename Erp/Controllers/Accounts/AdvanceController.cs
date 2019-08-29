@@ -5,8 +5,8 @@ using System.Net;
 using System.Net.Http;
 using IBLL.Accounts;
 using System.Web.Http;
-using Erp.FsLayUiModel;
-using IBLL.Production;
+using IBLL.Purchasing;
+using Currency.FsLayUiModel;
 
 namespace Erp.Controllers.Accounts
 {

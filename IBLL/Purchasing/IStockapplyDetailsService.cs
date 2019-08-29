@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MysqlModel;
 
-namespace IDAL.Production
+namespace IBLL.Purchasing
 {
-   public interface IStockapplyDAL:  IBaseDAL<stockapply>
+    public partial interface IStockapplyDetailsService:IBaseService<stockapplydetails>
     {
     }
 }

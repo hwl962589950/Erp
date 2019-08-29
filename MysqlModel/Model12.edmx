@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="erpModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="erpModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="accountmoneydetail">
           <Key>
             <PropertyRef Name="storageid" />
@@ -1122,9 +1122,9 @@
           <Property Name="Appauditingperson" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Appauditing" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Stockapplyname" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Enables" Type="int" Nullable="false" />
-          <Property Name="Safetyone" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Safetytwo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Enables" Type="int" />
+          <Property Name="Safetyone" Type="varchar" MaxLength="50" />
+          <Property Name="Safetytwo" Type="varchar" MaxLength="50" />
           <Property Name="Extend0" Type="varchar" MaxLength="200" />
           <Property Name="Extend1" Type="varchar" MaxLength="200" />
           <Property Name="Extend2" Type="varchar" MaxLength="200" />
@@ -1133,8 +1133,9 @@
         </EntityType>
         <EntityType Name="stockapplydetails">
           <Key>
-            <PropertyRef Name="Appid" />
+            <PropertyRef Name="TockapplyDetails" />
           </Key>
+          <Property Name="TockapplyDetails" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Appid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Apdmateridlid" Type="varchar" MaxLength="50" />
           <Property Name="Apdmateridlname" Type="varchar" MaxLength="50" />
@@ -1264,10 +1265,10 @@
           <Property Name="Stodate" Type="date" Nullable="false" />
           <Property Name="Stopeoname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Stopeoid" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stopeoadress" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stopeoadress" Type="varchar" MaxLength="50" />
           <Property Name="Stoistax" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Stostate" Type="int" Nullable="false" />
-          <Property Name="Stoadress" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stoadress" Type="varchar" MaxLength="50" />
           <Property Name="Stoempstock" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Stopersonid" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Stodept" Type="varchar" MaxLength="50" Nullable="false" />
@@ -1278,8 +1279,8 @@
           <Property Name="Checkstate" Type="int" Nullable="false" />
           <Property Name="Stockordername" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Enables" Type="int" Nullable="false" />
-          <Property Name="Safetyone" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Safetytwo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Safetyone" Type="varchar" MaxLength="50" />
+          <Property Name="Safetytwo" Type="varchar" MaxLength="50" />
           <Property Name="Extend0" Type="varchar" MaxLength="200" />
           <Property Name="Extend1" Type="varchar" MaxLength="200" />
           <Property Name="Extend2" Type="varchar" MaxLength="200" />
@@ -1543,8 +1544,7 @@
           <EntitySet Name="takeadvancedetails" EntityType="Self.takeadvancedetails" Schema="erp" store:Type="Tables" />
           <EntitySet Name="takeadvancegatherdetails" EntityType="Self.takeadvancegatherdetails" Schema="erp" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="erpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2676,8 +2676,9 @@
         </EntityType>
         <EntityType Name="stockapplydetails">
           <Key>
-            <PropertyRef Name="Appid" />
+            <PropertyRef Name="TockapplyDetails" />
           </Key>
+          <Property Name="TockapplyDetails" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Appid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Apdmateridlid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apdmateridlname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -4269,6 +4270,7 @@
           <EntitySetMapping Name="stockapplydetails">
             <EntityTypeMapping TypeName="erpModel.stockapplydetails">
               <MappingFragment StoreEntitySet="stockapplydetails">
+                <ScalarProperty Name="TockapplyDetails" ColumnName="TockapplyDetails" />
                 <ScalarProperty Name="Appid" ColumnName="Appid" />
                 <ScalarProperty Name="Apdmateridlid" ColumnName="Apdmateridlid" />
                 <ScalarProperty Name="Apdmateridlname" ColumnName="Apdmateridlname" />

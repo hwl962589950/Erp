@@ -43,10 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseDAL.cs" />
-    <Compile Include="Production\IStockapplyDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchasing\IStockapplyDAL.cs" />
+    <Compile Include="Purchasing\IStockapplydetailsDAL.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Production\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MysqlModel\MysqlModel.csproj">
       <Project>{afdd7b3b-df46-4773-ad17-cc1a6928c37d}</Project>

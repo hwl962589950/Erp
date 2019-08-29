@@ -10,7 +10,7 @@ namespace BLL
     //事务类
     public partial class Affair
     {
-        public static T Whether<T>(T t,Func<T,T> action)
+        public static T Whether<T,IT>(IT result,Func<IT,T> action)
         {
 
             TransactionOptions transactionOptions = new TransactionOptions();
@@ -24,15 +24,14 @@ namespace BLL
 
                 try
                 {
-                    t= action.Invoke(t);
+                  T t=  action.Invoke(result);
                     scope.Complete();
                     return t;
-                   
+
                 }
                 catch (Exception ex)
                 {
                     throw ex;
-                 
                 }
             }
 
