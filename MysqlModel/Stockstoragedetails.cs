@@ -139,5 +139,10 @@ namespace MysqlModel
         /// 扩展字段4  
         /// </summary>  
         public string Extend4 { get; set; } 
+    
+        /// <summary>  
+        /// 详表ID  
+        /// </summary>  
+        public string StockstorageDetail { get; set; } 
     }
 }

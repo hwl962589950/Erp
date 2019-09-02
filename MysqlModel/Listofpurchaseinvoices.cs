@@ -21,7 +21,7 @@ namespace MysqlModel
         public int invoicelist { get; set; } 
     
         /// <summary>  
-        /// 行号  
+        /// 详表ID  
         /// </summary>  
         public Nullable<int> lineint { get; set; } 
     

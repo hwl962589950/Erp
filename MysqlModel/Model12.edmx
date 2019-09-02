@@ -93,11 +93,10 @@
         </EntityType>
         <EntityType Name="advancegatherdetails">
           <Key>
-            <PropertyRef Name="Billid" />
             <PropertyRef Name="Cotemark" />
           </Key>
+          <Property Name="Cotemark" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Billid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Cotemark" Type="int" Nullable="false" />
           <Property Name="Promisedmoney" Type="float" Nullable="false" />
           <Property Name="Advancemoney" Type="float" Nullable="false" />
           <Property Name="Sinname" Type="varchar" MaxLength="50" Nullable="false" />
@@ -114,10 +113,10 @@
         </EntityType>
         <EntityType Name="apportiondetails">
           <Key>
-            <PropertyRef Name="Adeid" />
+            <PropertyRef Name="Adesequ" />
           </Key>
+          <Property Name="Adesequ" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Adeid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Adesequ" Type="int" />
           <Property Name="Adeexesid" Type="varchar" MaxLength="50" />
           <Property Name="Adeexesname" Type="varchar" MaxLength="50" />
           <Property Name="Adeamtmoney" Type="float" />
@@ -498,10 +497,10 @@
         </EntityType>
         <EntityType Name="listofpurchaseinvoices">
           <Key>
-            <PropertyRef Name="invoicelist" />
+            <PropertyRef Name="lineint" />
           </Key>
-          <Property Name="invoicelist" Type="int" Nullable="false" />
-          <Property Name="lineint" Type="int" />
+          <Property Name="lineint" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="invoicelist" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="materialint" Type="varchar" MaxLength="50" />
           <Property Name="namematerial" Type="varchar" MaxLength="100" />
           <Property Name="specificationtype" Type="varchar" MaxLength="50" />
@@ -646,7 +645,7 @@
           <Key>
             <PropertyRef Name="Moveinile" />
           </Key>
-          <Property Name="Moveinile" Type="int" Nullable="false" />
+          <Property Name="Moveinile" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="moveorderNo" Type="varchar" MaxLength="50" />
           <Property Name="Movematerielno" Type="varchar" MaxLength="50" />
           <Property Name="Movematerielname" Type="varchar" MaxLength="50" />
@@ -764,10 +763,10 @@
         </EntityType>
         <EntityType Name="paymentdetails">
           <Key>
-            <PropertyRef Name="payid" />
+            <PropertyRef Name="paydetid" />
           </Key>
+          <Property Name="paydetid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="payid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="paydetid" Type="int" />
           <Property Name="advdetoddtype" Type="varchar" MaxLength="50" />
           <Property Name="originaldate" Type="date" />
           <Property Name="advdetoddid" Type="varchar" MaxLength="20" />
@@ -1227,11 +1226,10 @@
         </EntityType>
         <EntityType Name="stockinquiredetails">
           <Key>
-            <PropertyRef Name="Stoid" />
             <PropertyRef Name="Sdarows" />
           </Key>
+          <Property Name="Sdarows" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Stoid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sdarows" Type="int" Nullable="false" />
           <Property Name="Sdamaterielid" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Sdamateridlname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Sdamodel" Type="varchar" MaxLength="50" Nullable="false" />
@@ -1289,10 +1287,10 @@
         </EntityType>
         <EntityType Name="stockorderdetails">
           <Key>
-            <PropertyRef Name="Sodid" />
+            <PropertyRef Name="Sodlineid" />
           </Key>
+          <Property Name="Sodlineid" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Sodid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sodlineid" Type="int" Nullable="false" />
           <Property Name="Sodmaterielid" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Sodmatid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Sodspec" Type="varchar" MaxLength="50" Nullable="false" />
@@ -1350,8 +1348,9 @@
         </EntityType>
         <EntityType Name="stockstoragedetails">
           <Key>
-            <PropertyRef Name="Storagedetailno" />
+            <PropertyRef Name="StockstorageDetail" />
           </Key>
+          <Property Name="StockstorageDetail" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Storagedetailno" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Materielid" Type="varchar" MaxLength="50" />
           <Property Name="Materielname" Type="varchar" MaxLength="50" />
@@ -1445,10 +1444,10 @@
         </EntityType>
         <EntityType Name="takeadvancedetails">
           <Key>
-            <PropertyRef Name="payid" />
+            <PropertyRef Name="takid" />
           </Key>
+          <Property Name="takid" Type="int" Nullable="false" />
           <Property Name="payid" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="takid" Type="int" />
           <Property Name="advdetoddtype" Type="varchar" MaxLength="50" />
           <Property Name="advdetoddid" Type="varchar" MaxLength="50" />
           <Property Name="advancebalance" Type="float" />
@@ -1460,11 +1459,10 @@
         </EntityType>
         <EntityType Name="takeadvancegatherdetails">
           <Key>
-            <PropertyRef Name="Payid" />
             <PropertyRef Name="Takid" />
           </Key>
-          <Property Name="Payid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Takid" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Payid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Advid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Advdetid" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Takadvmoney" Type="float" Nullable="false" />
@@ -2894,6 +2892,7 @@
         <EntityType Name="stockstoragedetails">
           <Key>
             <PropertyRef Name="Storagedetailno" />
+            <PropertyRef Name="StockstorageDetail" />
           </Key>
           <Property Name="Storagedetailno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Materielid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -2920,6 +2919,7 @@
           <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="StockstorageDetail" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="stockstoragetable">
           <Key>
@@ -4494,6 +4494,7 @@
           <EntitySetMapping Name="stockstoragedetails">
             <EntityTypeMapping TypeName="erpModel.stockstoragedetails">
               <MappingFragment StoreEntitySet="stockstoragedetails">
+                <ScalarProperty Name="StockstorageDetail" ColumnName="StockstorageDetail" />
                 <ScalarProperty Name="Storagedetailno" ColumnName="Storagedetailno" />
                 <ScalarProperty Name="Materielid" ColumnName="Materielid" />
                 <ScalarProperty Name="Materielname" ColumnName="Materielname" />

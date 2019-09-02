@@ -21,7 +21,7 @@ namespace MysqlModel
         public string Payid { get; set; } 
     
         /// <summary>  
-        /// 行号  
+        /// 详表ID  
         /// </summary>  
         public string Takid { get; set; } 
     

@@ -16,12 +16,12 @@ namespace MysqlModel
     {
     
         /// <summary>  
-        /// 采?悍痔ズ?采购分摊外键)  
+        /// 采购分摊外键  
         /// </summary>  
         public string Adeid { get; set; } 
     
         /// <summary>  
-        /// 序号  
+        /// 详表ID  
         /// </summary>  
         public Nullable<int> Adesequ { get; set; } 
     

@@ -16,7 +16,7 @@ namespace MysqlModel
     {
     
         /// <summary>  
-        /// 行号  
+        /// 详表ID  
         /// </summary>  
         public int Moveinile { get; set; } 
     

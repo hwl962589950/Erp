@@ -21,7 +21,7 @@ namespace MysqlModel
         public string Billid { get; set; } 
     
         /// <summary>  
-        /// 栏号  
+        /// 详表ID  
         /// </summary>  
         public int Cotemark { get; set; } 
     
