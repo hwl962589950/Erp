@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
-        /// 发票清单表ID  
-        /// </summary>  
-        public int invoicelist { get; set; } 
-    
-        /// <summary>  
         /// 详表ID  
         /// </summary>  
-        public Nullable<int> lineint { get; set; } 
+        public string lineint { get; set; } 
+    
+        /// <summary>  
+        /// 发票清单表ID  
+        /// </summary>  
+        public string invoicelist { get; set; } 
     
         /// <summary>  
         /// 物料编号  

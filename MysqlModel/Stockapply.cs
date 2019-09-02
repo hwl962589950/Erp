@@ -78,7 +78,7 @@ namespace MysqlModel
         /// <summary>  
         /// 标识是否删除  
         /// </summary>  
-        public int Enables { get; set; } 
+        public Nullable<int> Enables { get; set; } 
     
         /// <summary>  
         /// 保留字段 保存（“采购请购”）  

@@ -16,6 +16,11 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 详表ID  
+        /// </summary>  
+        public string StockstorageDetail { get; set; } 
+    
+        /// <summary>  
         /// 引用采购入库单单号  
         /// </summary>  
         public string Storagedetailno { get; set; } 
@@ -139,10 +144,5 @@ namespace MysqlModel
         /// 扩展字段4  
         /// </summary>  
         public string Extend4 { get; set; } 
-    
-        /// <summary>  
-        /// 详表ID  
-        /// </summary>  
-        public string StockstorageDetail { get; set; } 
     }
 }

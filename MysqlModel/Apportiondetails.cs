@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 详表ID  
+        /// </summary>  
+        public string Adesequ { get; set; } 
+    
+        /// <summary>  
         /// 采购分摊外键  
         /// </summary>  
         public string Adeid { get; set; } 
-    
-        /// <summary>  
-        /// 详表ID  
-        /// </summary>  
-        public Nullable<int> Adesequ { get; set; } 
     
         /// <summary>  
         /// 费用编号  

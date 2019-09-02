@@ -5,71 +5,71 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="cffd8cccfbad461f89fa2acfb6db9070" Name="Diagram1" ZoomLevel="84">
-        <EntityTypeShape EntityType="erpModel.accountmoneydetail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.advance" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.advancedetails" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.advancegather" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.advancegatherdetails" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.apportiondetails" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.apportionresult" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.apportionwise" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.calculateunit" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.checkdetail" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.checked" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.clashfund" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.clashfunddetailsone" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.client" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.clientaddress" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.clienttype" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.currencytype" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.depothead" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.depotheaddetails" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.depttab" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.dsdaarea" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.employee" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.generalledger" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.listofpurchaseinvoices" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.mainlistofpurchaseinvoices" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.materiel" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.materieltype" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.movedetails" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.moveprice" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.movepricedetail" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.movestorage" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.othercome" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.othercomedetail" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.otheroutdetail" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.otheroutmain" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.payment" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.paymentdetails" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.procurementinvoicebreakdown" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.provideinfo" Width="1.5" PointX="20.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.recededetails" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.revenuechargetype" Width="1.5" PointX="20.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.saleaccountdetails" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sell_order" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sell_order_item" Width="1.5" PointX="10.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sell_quote" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sell_quote_item" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sellinvoice" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sellinvoiceitem" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.sellinvoicelist" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stagnation" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockapply" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockapplydetails" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockapplytype" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockapportion" Width="1.5" PointX="24.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockinquire" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockinquiredetails" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockorder" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockorderdetails" Width="1.5" PointX="2.75" PointY="25.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockrecede" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockstoragedetails" Width="1.5" PointX="4.75" PointY="26.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.stockstoragetable" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.storage" Width="1.5" PointX="26.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.supplieraddress" Width="1.5" PointX="26.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.takeadvancedetails" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="erpModel.takeadvancegatherdetails" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.accountmoneydetail" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.advance" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.advancedetails" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.advancegather" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="erpModel.advancegatherdetails" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.apportiondetails" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="erpModel.apportionresult" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="erpModel.apportionwise" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.calculateunit" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="erpModel.checkdetail" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="erpModel.checked" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.clashfund" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="erpModel.clashfunddetailsone" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="erpModel.client" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.clientaddress" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="erpModel.clienttype" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="erpModel.currencytype" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="erpModel.depothead" Width="1.5" PointX="6.75" PointY="12.75" />
+        <EntityTypeShape EntityType="erpModel.depotheaddetails" Width="1.5" PointX="12.75" PointY="10.75" />
+        <EntityTypeShape EntityType="erpModel.depttab" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="erpModel.dsdaarea" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.employee" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="erpModel.generalledger" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="erpModel.listofpurchaseinvoices" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.mainlistofpurchaseinvoices" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="erpModel.materiel" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="erpModel.materieltype" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="erpModel.movedetails" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="erpModel.moveprice" Width="1.5" PointX="2.75" PointY="17.75" />
+        <EntityTypeShape EntityType="erpModel.movepricedetail" Width="1.5" PointX="12.75" PointY="17.75" />
+        <EntityTypeShape EntityType="erpModel.movestorage" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.othercome" Width="1.5" PointX="18.75" PointY="4.75" />
+        <EntityTypeShape EntityType="erpModel.othercomedetail" Width="1.5" PointX="18.75" PointY="8.75" />
+        <EntityTypeShape EntityType="erpModel.otheroutdetail" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="erpModel.otheroutmain" Width="1.5" PointX="14.75" PointY="18.75" />
+        <EntityTypeShape EntityType="erpModel.payment" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="erpModel.paymentdetails" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.procurementinvoicebreakdown" Width="1.5" PointX="4.75" PointY="20.75" />
+        <EntityTypeShape EntityType="erpModel.provideinfo" Width="1.5" PointX="20.75" PointY="6.75" />
+        <EntityTypeShape EntityType="erpModel.recededetails" Width="1.5" PointX="6.75" PointY="20.75" />
+        <EntityTypeShape EntityType="erpModel.revenuechargetype" Width="1.5" PointX="20.75" PointY="15.75" />
+        <EntityTypeShape EntityType="erpModel.saleaccountdetails" Width="1.5" PointX="20.75" PointY="18.75" />
+        <EntityTypeShape EntityType="erpModel.sell_order" Width="1.5" PointX="8.75" PointY="21.75" />
+        <EntityTypeShape EntityType="erpModel.sell_order_item" Width="1.5" PointX="10.75" PointY="21.75" />
+        <EntityTypeShape EntityType="erpModel.sell_quote" Width="1.5" PointX="16.75" PointY="21.75" />
+        <EntityTypeShape EntityType="erpModel.sell_quote_item" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.sellinvoice" Width="1.5" PointX="22.75" PointY="6.75" />
+        <EntityTypeShape EntityType="erpModel.sellinvoiceitem" Width="1.5" PointX="12.75" PointY="22.75" />
+        <EntityTypeShape EntityType="erpModel.sellinvoicelist" Width="1.5" PointX="22.75" PointY="13.75" />
+        <EntityTypeShape EntityType="erpModel.stagnation" Width="1.5" PointX="22.75" PointY="18.75" />
+        <EntityTypeShape EntityType="erpModel.stockapply" Width="1.5" PointX="22.75" PointY="22.75" />
+        <EntityTypeShape EntityType="erpModel.stockapplydetails" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.stockapplytype" Width="1.5" PointX="0.75" PointY="24.75" />
+        <EntityTypeShape EntityType="erpModel.stockapportion" Width="1.5" PointX="24.75" PointY="7.75" />
+        <EntityTypeShape EntityType="erpModel.stockinquire" Width="1.5" PointX="24.75" PointY="12.75" />
+        <EntityTypeShape EntityType="erpModel.stockinquiredetails" Width="1.5" PointX="18.75" PointY="24.75" />
+        <EntityTypeShape EntityType="erpModel.stockorder" Width="1.5" PointX="24.75" PointY="19.75" />
+        <EntityTypeShape EntityType="erpModel.stockorderdetails" Width="1.5" PointX="2.75" PointY="25.75" />
+        <EntityTypeShape EntityType="erpModel.stockrecede" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="erpModel.stockstoragedetails" Width="1.5" PointX="4.75" PointY="26.75" />
+        <EntityTypeShape EntityType="erpModel.stockstoragetable" Width="1.5" PointX="26.75" PointY="7.75" />
+        <EntityTypeShape EntityType="erpModel.storage" Width="1.5" PointX="26.75" PointY="14.75" />
+        <EntityTypeShape EntityType="erpModel.supplieraddress" Width="1.5" PointX="26.75" PointY="19.75" />
+        <EntityTypeShape EntityType="erpModel.takeadvancedetails" Width="1.5" PointX="26.75" PointY="23.75" />
+        <EntityTypeShape EntityType="erpModel.takeadvancegatherdetails" Width="1.5" PointX="6.75" PointY="27.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

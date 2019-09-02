@@ -18,7 +18,7 @@ namespace MysqlModel
         /// <summary>  
         /// 详表ID  
         /// </summary>  
-        public int Moveinile { get; set; } 
+        public string Moveinile { get; set; } 
     
         /// <summary>  
         /// 单据号码  

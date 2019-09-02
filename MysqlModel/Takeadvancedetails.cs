@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 详表ID  
+        /// </summary>  
+        public int takid { get; set; } 
+    
+        /// <summary>  
         /// 应付冲款单单号  
         /// </summary>  
         public string payid { get; set; } 
-    
-        /// <summary>  
-        /// 详表ID  
-        /// </summary>  
-        public Nullable<int> takid { get; set; } 
     
         /// <summary>  
         /// 来源预付单单别  

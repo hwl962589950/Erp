@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 栏号  
+        /// </summary>  
+        public string Sodlineid { get; set; } 
+    
+        /// <summary>  
         /// 单据号  
         /// </summary>  
         public string Sodid { get; set; } 
-    
-        /// <summary>  
-        /// 栏号  
-        /// </summary>  
-        public int Sodlineid { get; set; } 
     
         /// <summary>  
         /// 物料编号  

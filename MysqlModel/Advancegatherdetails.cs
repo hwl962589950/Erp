@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 详表ID  
+        /// </summary>  
+        public string Cotemark { get; set; } 
+    
+        /// <summary>  
         /// 单据号码Advancegather(billId)  
         /// </summary>  
         public string Billid { get; set; } 
-    
-        /// <summary>  
-        /// 详表ID  
-        /// </summary>  
-        public int Cotemark { get; set; } 
     
         /// <summary>  
         /// 预收金额  

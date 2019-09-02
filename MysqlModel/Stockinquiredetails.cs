@@ -16,14 +16,14 @@ namespace MysqlModel
     {
     
         /// <summary>  
+        /// 行号  
+        /// </summary>  
+        public string Sdarows { get; set; } 
+    
+        /// <summary>  
         /// 询价单编号  
         /// </summary>  
         public string Stoid { get; set; } 
-    
-        /// <summary>  
-        /// 行号  
-        /// </summary>  
-        public int Sdarows { get; set; } 
     
         /// <summary>  
         /// 物料编号  
