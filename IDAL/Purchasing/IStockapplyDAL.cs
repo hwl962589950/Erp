@@ -11,8 +11,9 @@ namespace IDAL.Purchasing
     {
 
         void Add(stockapply sto, List<stockapplydetails> stockapplydetails);
-        
 
+
+        void Update(stockapply sto, List<stockapplydetails> stockapplydetails);
 
     }
 }

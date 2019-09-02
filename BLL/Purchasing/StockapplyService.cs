@@ -89,5 +89,54 @@ namespace BLL.Purchasing
             return result;
         }
 
+        public Result<stockapply> Update(stockapply sto, List<stockapplydetails> stockapplydetails)
+        {
+            Result<stockapply> result = null;
+            try
+            {
+                Affair.Whether<int, stockapply>(sto, (s) =>
+                {
+                    int i = 1;
+
+                    //修改采后编号
+                    stockapplydetails.ForEach(d => {
+                        d.Safetyone = "测试修改";
+                        d.Safetytwo = "测试修改";
+                        d.Appid = sto.Appid;
+                        d.TockapplyDetails = sto.Appid + i.ToString("00");
+                        i++;
+                    });
+
+                    _StockapplyDAL.Update(sto, stockapplydetails);
+                    int count = _StockapplyDAL.SaveChanges();
+                   
+                    return count;
+                });
+
+                result = new Result<stockapply>()
+                {
+                    errorInfo = "修改采购请购单成功",
+                    errorNo = 0,
+                    results = new ModelData<stockapply>()
+                    {
+                        data = sto
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                result = new Result<stockapply>()
+                {
+                    errorInfo = ex.Message,
+                    errorNo = -5,
+                    results = null
+                };
+
+            }
+
+
+            return result;
+
+        }
     }
 }

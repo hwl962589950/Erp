@@ -39,7 +39,7 @@ namespace Erp.Controllers
         [HttpPost]
         [HttpGet]
         /// <summary>
-        /// 通过主键获取
+        /// 通过主键获取实体
         /// </summary>
         /// <returns></returns>
         public virtual Result<T> Get()
@@ -65,8 +65,32 @@ namespace Erp.Controllers
             return result;
         }
 
+        [HttpPost]
+        [HttpGet]
+        /// <summary>
+        /// 通过主键删除实体
+        /// </summary>
+        /// <returns></returns>
+        public virtual Result<T> Tel()
+        {
+            var listObj = new List<object>();
+            foreach (var item in HttpContext.Current.Request.Form.Keys)
+            {
+                listObj.Add(HttpContext.Current.Request.Form[item.ToString()]);
+            }
+            var entity = listObj.Count > 0 ? _BaseService.GetModel(listObj.ToArray()) : null;
+            var result = new Result<T>();
 
+            bool flge= _BaseService.Delete(entity);
 
+            result.errorNo = flge?0:-5;
+            result.errorInfo = flge ? "删除成功" : "删除失败！";
+            result.results = new ModelData<T>()
+            {
+                data = entity
+            };
+            return result;
+        }
 
 
 

@@ -17,7 +17,7 @@ namespace MysqlModel
     
         /// <summary>  
         /// 请购单编号  
-        /// </summary>  
+        /// </summary>   
         public string Appid { get; set; } 
     
         /// <summary>  

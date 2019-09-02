@@ -107,6 +107,32 @@ namespace Erp.Controllers.Purchasing
         }
 
 
+        /// <summary>
+        /// 修改采购请购单
+        /// </summary>
+        /// <returns></returns>
+        public Result<stockapply> UpdStockapply(JObject jObject)
+        {
+            // fsTableData Table表格数据
+            //fsFormData 表单数据
+            dynamic obj = jObject;
+            string tableObj = obj.fsTableData;
+            string fromObj = obj.fsFormData;
+
+            string tableObjJsonStr = Uri.UnescapeDataString(tableObj);
+            string fromObjJsonStr = Uri.UnescapeDataString(fromObj);
+
+            dynamic eneitya = JsonConvert.DeserializeObject<dynamic>(fromObjJsonStr);
+
+            //采购请购单
+            var eneity = JsonConvert.DeserializeObject<Api_View_Stockapply>(fromObjJsonStr).ToEntity();
+            //请购单详细
+            var eneitydetails = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).ToEntity();
+
+
+            return _StockapplyService.Update(eneity, eneitydetails);
+        }
+
 
 
 
