@@ -167,12 +167,18 @@
     <Compile Include="AutoMapper\MapperExtention.cs" />
     <Compile Include="Controllers\Accounts\AdvanceController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\PublicInformation\MaterieController.cs" />
+    <Compile Include="Controllers\PublicInformation\ProvideinfoController.cs" />
     <Compile Include="Controllers\Purchasing\StockapplyController.cs" />
     <Compile Include="Controllers\Purchasing\StockapplyDetailsController.cs" />
+    <Compile Include="Controllers\Purchasing\StockorderController.cs" />
+    <Compile Include="Controllers\Purchasing\StockorderdetailsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Production\Api_View_Stockorder.cs" />
+    <Compile Include="Models\Production\Api_View_stockorderdetails.cs" />
     <Compile Include="Models\Production\Api_View_Stockapply.cs" />
     <Compile Include="Models\Production\Api_View_StockapplyDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

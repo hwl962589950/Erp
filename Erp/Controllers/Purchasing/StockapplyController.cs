@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using Currency.FsLayUiModel;
 using Erp.Models.Production;
@@ -76,7 +78,7 @@ namespace Erp.Controllers.Purchasing
             return _StockapplyService.ListModels(s => true).ToList();
         }
 
-       
+
         [HttpGet]
         [HttpPost]
         /// <summary>
@@ -97,9 +99,9 @@ namespace Erp.Controllers.Purchasing
             dynamic eneitya = JsonConvert.DeserializeObject<dynamic>(fromObjJsonStr);
 
             //采购请购单
-           var eneity=  JsonConvert.DeserializeObject<Api_View_Stockapply>(fromObjJsonStr).ToEntity();
+            var eneity = JsonConvert.DeserializeObject<Api_View_Stockapply>(fromObjJsonStr).ToEntity();
             //请购单详细
-           var eneitydetails = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).ToEntity();
+            var eneitydetails = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).ToEntity();
 
             var test = JsonConvert.DeserializeObject<List<Api_View_StockapplyDetails>>(tableObjJsonStr).MapToList<stockapplydetails>();
 
@@ -133,7 +135,45 @@ namespace Erp.Controllers.Purchasing
             return _StockapplyService.Update(eneity, eneitydetails);
         }
 
+        [HttpPost]
+        [HttpGet]
+        /// <summary>
+        /// 获取分页数据
+        /// </summary>
+        /// <returns></returns>
+        public  Result<stockapply> PageQueny([FromUri]Api_View_Stockapply_Where where, int pageNum, int pageSize)
+        {
+            string toExamineStatic = where.ToExamineStatic == 1 ? "已复核" : "未复核";
+            //条件
+            Expression<Func<stockapply, bool>> func = (s) =>
+                 (string.IsNullOrEmpty(where.Appid) || s.Appid.StartsWith(where.Appid)) && (!where.Appdate.HasValue || s.Appdate > where.Appdate.Value) && (where.Appcircs==0 || s.Appcircs== where.Appcircs) && (where.ToExamineStatic==0 || s.Appauditing.Equals(toExamineStatic));
+            ;
 
+            //分页集合
+            var list = _StockapplyService.ListModelsByPage(pageSize, pageNum, false, s => s.Appid,  func, out int total).ToList();
+
+            int pages = total % pageSize == 0 ? total / pageSize : total / pageSize + 1;
+
+
+            return new Result<stockapply>()
+            {
+                 errorNo=0, results=new PageFsData<stockapply>(pageNum, pageSize, pages,total,list)
+            };
+        }
+
+        /// <summary>
+        /// 审核
+        /// </summary>
+        public Result<stockapply> ToExamine()
+        {
+            //采购请购ID
+            string appdid = HttpContext.Current.Request.Form[0];
+            //复核状态
+            string Appauditing = HttpContext.Current.Request.Form[1];
+
+           return _StockapplyService.ToExamine(appdid, Appauditing);
+
+        }
 
 
     }

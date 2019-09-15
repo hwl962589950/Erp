@@ -29,7 +29,7 @@ namespace Erp.Models.Production
         /// <summary>  
         /// 单况：已结案/未结案/无效  
         /// </summary>  
-        public int Appcircs { get; set; }
+        public string Appcircs { get; set; }
 
         /// <summary>  
         /// 请购人员  
@@ -92,4 +92,32 @@ namespace Erp.Models.Production
         /// </summary>  
         public string Extend4 { get; set; }
     }
+
+
+    /// <summary>
+    /// 采购请购单 查询条件
+    /// </summary>
+    public partial class Api_View_Stockapply_Where
+    {
+        /// <summary>  
+        /// 请购单编号  
+        /// </summary>  
+        public string Appid { get; set; }
+
+        /// <summary>  
+        /// 请购单日期  
+        /// </summary>  
+        public  System.DateTime ? Appdate { get; set; }
+
+        /// <summary>  
+        /// 单况：全部/已结案/未结案/无效  
+        /// </summary>  
+        public int Appcircs { get; set; }
+
+        /// <summary> 
+        /// 审核状态：全部/已审核/未审核
+        /// </summary>  
+        public int ToExamineStatic { get; set; }
+    }
+
 }

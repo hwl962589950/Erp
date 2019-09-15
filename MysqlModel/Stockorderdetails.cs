@@ -103,7 +103,7 @@ namespace MysqlModel
         /// <summary>  
         /// 标识是否删除  
         /// </summary>  
-        public int Enables { get; set; } 
+        public Nullable<int> Enables { get; set; } 
     
         /// <summary>  
         /// 保留字段  
@@ -116,7 +116,7 @@ namespace MysqlModel
         public string Safetytwo { get; set; } 
     
         /// <summary>  
-        /// 扩展字段0  
+        /// 转单ID  
         /// </summary>  
         public string Extend0 { get; set; } 
     

@@ -26,6 +26,14 @@ namespace IBLL.Purchasing
         /// <returns></returns>
         Result<stockapply> Update(stockapply sto, List<stockapplydetails> stockapplydetails);
 
+        /// <summary>
+        /// 复核请购单
+        /// </summary>
+        /// <param name="appdId">请购单ID</param>
+        /// <param name="sta">复核状态</param>
+        /// <returns></returns>
+        Result<stockapply> ToExamine(string appdId,string sta);
+
 
     }
 }

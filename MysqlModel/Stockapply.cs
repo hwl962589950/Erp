@@ -66,7 +66,7 @@ namespace MysqlModel
         public string Appauditingperson { get; set; } 
     
         /// <summary>  
-        /// 审核状态：未审核/已审核/无效  
+        /// 审核状态：未审核/已审核  
         /// </summary>  
         public string Appauditing { get; set; } 
     
@@ -81,7 +81,7 @@ namespace MysqlModel
         public Nullable<int> Enables { get; set; } 
     
         /// <summary>  
-        /// 保留字段 保存（“采购请购”）  
+        /// 保留字段  
         /// </summary>  
         public string Safetyone { get; set; } 
     
@@ -91,7 +91,7 @@ namespace MysqlModel
         public string Safetytwo { get; set; } 
     
         /// <summary>  
-        /// 扩展字段0  
+        /// 标记是否还可以修改  
         /// </summary>  
         public string Extend0 { get; set; } 
     

@@ -18,6 +18,8 @@ namespace MysqlModel
         public erpEntities()
             : base("name=erpEntities")
         {
+            //关闭实体验证
+            base.Configuration.ValidateOnSaveEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -81,8 +83,6 @@ namespace MysqlModel
         public DbSet<stockapportion> stockapportion { get; set; }
         public DbSet<stockinquire> stockinquire { get; set; }
         public DbSet<stockinquiredetails> stockinquiredetails { get; set; }
-        public DbSet<stockorder> stockorder { get; set; }
-        public DbSet<stockorderdetails> stockorderdetails { get; set; }
         public DbSet<stockrecede> stockrecede { get; set; }
         public DbSet<stockstoragedetails> stockstoragedetails { get; set; }
         public DbSet<stockstoragetable> stockstoragetable { get; set; }
@@ -90,5 +90,7 @@ namespace MysqlModel
         public DbSet<supplieraddress> supplieraddress { get; set; }
         public DbSet<takeadvancedetails> takeadvancedetails { get; set; }
         public DbSet<takeadvancegatherdetails> takeadvancegatherdetails { get; set; }
+        public DbSet<stockorderdetails> stockorderdetails { get; set; }
+        public DbSet<stockorder> stockorder { get; set; }
     }
 }

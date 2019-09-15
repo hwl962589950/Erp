@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
+using IBLL;
 using IDAL;
 
 namespace BLL
@@ -50,6 +51,11 @@ namespace BLL
             return DAL.ListModelsByPage(pageSize, pageIndex, isAsc, OrderByLambda, WhereLambda);
         }
 
-      
+        public virtual IQueryable<T> ListModelsByPage<type>(int pageSize, int pageIndex, bool isAsc, Expression<Func<T, type>> OrderByLambda, Expression<Func<T, bool>> WhereLambda, out int total)
+        {
+            return DAL.ListModelsByPage(pageSize, pageIndex, isAsc, OrderByLambda, WhereLambda, out total);
+        }
+
+
     }
 }

@@ -48,6 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Purchasing\IStockapplyDetailsService.cs" />
     <Compile Include="Purchasing\IStockapplyService.cs" />
+    <Compile Include="Purchasing\IStockorderdetailsService.cs" />
+    <Compile Include="Purchasing\IStockorderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Production\" />

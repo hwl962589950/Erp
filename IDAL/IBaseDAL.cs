@@ -30,7 +30,8 @@ namespace IDAL
         //分页 排序 查询
         IQueryable<T> ListModelsByPage<type>(int pageSize, int pageIndex, bool isAsc, Expression<Func<T, type>> OrderByLambda, Expression<Func<T, bool>> WhereLambda);
 
-
+        //分页 排序 查询 一次性查询数量
+        IQueryable<T> ListModelsByPage<type>(int pageSize, int pageIndex, bool isAsc, Expression<Func<T, type>> OrderByLambda, Expression<Func<T, bool>> WhereLambda, out int total);
 
     }
 }

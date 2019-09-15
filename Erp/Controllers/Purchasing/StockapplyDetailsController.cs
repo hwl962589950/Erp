@@ -48,7 +48,7 @@ namespace Erp.Controllers.Purchasing
                 Apdunit = "个",
                 Appid = "A01",
                 Enables = 1,
-                TockapplyDetails = "001"
+                TockapplyDetails = "001",
             };
             _StockapplyDetailsService.Add(a);
             return 0;
@@ -112,13 +112,16 @@ namespace Erp.Controllers.Purchasing
             });
 
 
+            var list2 = _StockapplyDetailsService.ListModels(s => s.Appid
+            == Appid).ToList();
+
             return  new Result<stockapplydetails>()
             {
                 errorInfo = "",
                 errorNo = 0,
                 results = new FsData<stockapplydetails>()
                 {
-                    data = list
+                    data = list2
                 }
             };
         }

@@ -8,17 +8,23 @@ using IDAL.Purchasing;
 using IBLL;
 using MysqlModel;
 using Currency.FsLayUiModel;
+using DAL.Purchasing;
 
 namespace BLL.Purchasing
 {
+    /// <summary>
+    /// 采购请购单
+    /// </summary>
     public partial class StockapplyService : BaseService<stockapply>, IStockapplyService
     {
         private readonly IStockapplyDAL _StockapplyDAL = null;
+        private readonly IStockorderdetailsDAL _StockorderdetailsDAL = null;
 
-        public StockapplyService(IStockapplyDAL stockapply)
+        public StockapplyService(IStockapplyDAL stockapply, IStockorderdetailsDAL stockorderdetailsDAL)
         {
             base.DAL = stockapply;
             this._StockapplyDAL = stockapply;
+            this._StockorderdetailsDAL = stockorderdetailsDAL;
         }
 
         public Result<stockapply> Add(stockapply sto, List<stockapplydetails> stockapplydetails)
@@ -30,7 +36,7 @@ namespace BLL.Purchasing
             sto.Enables = 0;
             sto.Appdeptid = "";
             sto.Apppersonid = "1";
-            sto.Appauditing = "1";
+            sto.Appauditing = "未复核";
             sto.Appauditingperson = "1";
             sto.Appmaker = "1";
             sto.Stockapplyname = "";
@@ -94,6 +100,16 @@ namespace BLL.Purchasing
             Result<stockapply> result = null;
             try
             {
+                var entity = this._StockapplyDAL.GetModel(s => s.Appid == sto.Appid);
+                if (entity == null)
+                    throw new Exception($"{sto.Appid} 单号不存在");
+                if (!string.IsNullOrEmpty(entity.Extend0))
+                    throw new Exception("请购单状态不可以更改");
+
+                entity.Apptype = sto.Apptype;
+                entity.Appcircs = sto.Appcircs;
+
+
                 Affair.Whether<int, stockapply>(sto, (s) =>
                 {
                     int i = 1;
@@ -107,7 +123,7 @@ namespace BLL.Purchasing
                         i++;
                     });
 
-                    _StockapplyDAL.Update(sto, stockapplydetails);
+                    _StockapplyDAL.Update(entity.Appid, stockapplydetails);
                     int count = _StockapplyDAL.SaveChanges();
                    
                     return count;
@@ -138,5 +154,58 @@ namespace BLL.Purchasing
             return result;
 
         }
+
+
+        /// <summary>
+        /// 审核复核
+        /// </summary>
+        /// <param name="appdId">请购单ID</param>
+        /// <param name="sta">审核状态</param>
+        /// <returns></returns>
+        public Result<stockapply> ToExamine(string appdId, string sta)
+        {
+            var resuly = new Result<stockapply>()
+            {
+                errorNo = 0
+            };
+
+            var entity = _StockapplyDAL.GetModel(s => s.Appid == appdId);
+            if(entity == null)
+            {
+                resuly.errorNo = -1;
+                resuly.errorInfo = $"请购单 {appdId} 不存在";
+            }
+
+            if(entity.Appauditing == "已复核")
+            {
+                //取消审核
+                var count = _StockorderdetailsDAL.ListModels(s => s.Sodorigintype == "采购请购单" && s.Sodorigin == entity.Appid).Count();
+                if (count > 0)
+                {
+                    resuly.errorNo = -1;
+                    resuly.errorInfo = $"请购单 {appdId} 已经被其他单据使用不可以取消审核";
+                }
+                entity.Appauditing = "未复核";
+                resuly.errorInfo = "成功取消审核";
+            }
+            else
+            {
+                //审核
+                entity.Appauditing = "已复核";
+                resuly.errorInfo = "成功审核";
+            }
+            if (DAL.SaveChanges()<=0)
+            {
+                resuly.errorNo = -1;
+                resuly.errorInfo = "数据修改失败！ 请联系管理员";
+            }
+
+            return resuly;
+
+
+
+        }
+
+
     }
 }

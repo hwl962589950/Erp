@@ -46,7 +46,7 @@ namespace MysqlModel
         public string Stoistax { get; set; } 
     
         /// <summary>  
-        /// 单况：1-未结案，2-已结案，3-无效  
+        /// 单况：1-已结案，2-未结案，3-无效  
         /// </summary>  
         public int Stostate { get; set; } 
     
@@ -103,7 +103,7 @@ namespace MysqlModel
         /// <summary>  
         /// 标识是否删除  
         /// </summary>  
-        public int Enables { get; set; } 
+        public Nullable<int> Enables { get; set; } 
     
         /// <summary>  
         /// 保留字段  
@@ -139,5 +139,10 @@ namespace MysqlModel
         /// 扩展字段4  
         /// </summary>  
         public string Extend4 { get; set; } 
+    
+        /// <summary>  
+        ///   
+        /// </summary>  
+        public string Extend5 { get; set; } 
     }
 }

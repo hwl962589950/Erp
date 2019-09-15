@@ -18,8 +18,12 @@ namespace Erp.AutoMapper
             //注册类型
             Mapper.Initialize(cfg =>
             {
+                //采购请购
                 cfg.CreateMap<Api_View_Stockapply, stockapply>();
                 cfg.CreateMap<Api_View_StockapplyDetails, stockapplydetails>();
+                //采购订单
+                cfg.CreateMap<Api_View_Stockorder, stockorder>();
+                cfg.CreateMap<Api_View_stockorderdetails, stockorderdetails>();
                     
             });
         }

@@ -13,7 +13,7 @@ namespace IDAL.Purchasing
         void Add(stockapply sto, List<stockapplydetails> stockapplydetails);
 
 
-        void Update(stockapply sto, List<stockapplydetails> stockapplydetails);
+        void Update(string id,List<stockapplydetails> stockapplydetails);
 
     }
 }

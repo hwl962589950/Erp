@@ -1113,14 +1113,14 @@
           <Property Name="Appdate" Type="date" Nullable="false" />
           <Property Name="Apptype" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Appcircs" Type="int" Nullable="false" />
-          <Property Name="Appperson" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Apppersonid" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Appdept" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Appdeptid" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Appmaker" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Appauditingperson" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Appperson" Type="varchar" MaxLength="50" />
+          <Property Name="Apppersonid" Type="varchar" MaxLength="50" />
+          <Property Name="Appdept" Type="varchar" MaxLength="50" />
+          <Property Name="Appdeptid" Type="varchar" MaxLength="50" />
+          <Property Name="Appmaker" Type="varchar" MaxLength="50" />
+          <Property Name="Appauditingperson" Type="varchar" MaxLength="50" />
           <Property Name="Appauditing" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stockapplyname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stockapplyname" Type="varchar" MaxLength="50" />
           <Property Name="Enables" Type="int" />
           <Property Name="Safetyone" Type="varchar" MaxLength="50" />
           <Property Name="Safetytwo" Type="varchar" MaxLength="50" />
@@ -1267,16 +1267,16 @@
           <Property Name="Stoistax" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Stostate" Type="int" Nullable="false" />
           <Property Name="Stoadress" Type="varchar" MaxLength="50" />
-          <Property Name="Stoempstock" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stopersonid" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stodept" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stodeptid" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stoempname" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stoempcheck" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Stomark" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Stoempstock" Type="varchar" MaxLength="50" />
+          <Property Name="Stopersonid" Type="varchar" MaxLength="50" />
+          <Property Name="Stodept" Type="varchar" MaxLength="50" />
+          <Property Name="Stodeptid" Type="varchar" MaxLength="50" />
+          <Property Name="Stoempname" Type="varchar" MaxLength="50" />
+          <Property Name="Stoempcheck" Type="varchar" MaxLength="50" />
+          <Property Name="Stomark" Type="varchar" MaxLength="2000" />
           <Property Name="Checkstate" Type="int" Nullable="false" />
-          <Property Name="Stockordername" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Enables" Type="int" Nullable="false" />
+          <Property Name="Stockordername" Type="varchar" MaxLength="50" />
+          <Property Name="Enables" Type="int" />
           <Property Name="Safetyone" Type="varchar" MaxLength="50" />
           <Property Name="Safetytwo" Type="varchar" MaxLength="50" />
           <Property Name="Extend0" Type="varchar" MaxLength="200" />
@@ -1284,6 +1284,7 @@
           <Property Name="Extend2" Type="varchar" MaxLength="200" />
           <Property Name="Extend3" Type="varchar" MaxLength="200" />
           <Property Name="Extend4" Type="varchar" MaxLength="200" />
+          <Property Name="Extend5" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="stockorderdetails">
           <Key>
@@ -1303,12 +1304,12 @@
           <Property Name="Sodsumcess" Type="float" Nullable="false" />
           <Property Name="Sodsumprice" Type="float" Nullable="false" />
           <Property Name="Sodpreincomestorage" Type="date" Nullable="false" />
-          <Property Name="Sodpresent" Type="varchar" MaxLength="4" Nullable="false" />
-          <Property Name="Sodorigintype" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sodorigin" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Enables" Type="int" Nullable="false" />
-          <Property Name="Safetyone" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Safetytwo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sodpresent" Type="varchar" MaxLength="4" />
+          <Property Name="Sodorigintype" Type="varchar" MaxLength="20" />
+          <Property Name="Sodorigin" Type="varchar" MaxLength="20" />
+          <Property Name="Enables" Type="int" />
+          <Property Name="Safetyone" Type="varchar" MaxLength="50" />
+          <Property Name="Safetytwo" Type="varchar" MaxLength="50" />
           <Property Name="Extend0" Type="varchar" MaxLength="200" />
           <Property Name="Extend1" Type="varchar" MaxLength="200" />
           <Property Name="Extend2" Type="varchar" MaxLength="200" />
@@ -1603,8 +1604,6 @@
           <EntitySet Name="stockapportion" EntityType="erpModel.stockapportion" />
           <EntitySet Name="stockinquire" EntityType="erpModel.stockinquire" />
           <EntitySet Name="stockinquiredetails" EntityType="erpModel.stockinquiredetails" />
-          <EntitySet Name="stockorder" EntityType="erpModel.stockorder" />
-          <EntitySet Name="stockorderdetails" EntityType="erpModel.stockorderdetails" />
           <EntitySet Name="stockrecede" EntityType="erpModel.stockrecede" />
           <EntitySet Name="stockstoragedetails" EntityType="erpModel.stockstoragedetails" />
           <EntitySet Name="stockstoragetable" EntityType="erpModel.stockstoragetable" />
@@ -1612,6 +1611,8 @@
           <EntitySet Name="supplieraddress" EntityType="erpModel.supplieraddress" />
           <EntitySet Name="takeadvancedetails" EntityType="erpModel.takeadvancedetails" />
           <EntitySet Name="takeadvancegatherdetails" EntityType="erpModel.takeadvancegatherdetails" />
+          <EntitySet Name="stockorderdetails" EntityType="erpModel.stockorderdetails" />
+          <EntitySet Name="stockorder" EntityType="erpModel.stockorder" />
         </EntityContainer>
         <EntityType Name="accountmoneydetail">
           <Key>
@@ -2863,66 +2864,6 @@
           <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="stockorder">
-          <Key>
-            <PropertyRef Name="Stoid" />
-          </Key>
-          <Property Name="Stoid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Stodate" Type="DateTime" Nullable="false" />
-          <Property Name="Stopeoname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stopeoid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stopeoadress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stoistax" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Stostate" Type="Int32" Nullable="false" />
-          <Property Name="Stoadress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stoempstock" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stopersonid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stodept" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stodeptid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stoempname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stoempcheck" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Stomark" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="false" />
-          <Property Name="Checkstate" Type="Int32" Nullable="false" />
-          <Property Name="Stockordername" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Enables" Type="Int32" Nullable="false" />
-          <Property Name="Safetyone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Safetytwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Extend0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="stockorderdetails">
-          <Key>
-            <PropertyRef Name="Sodlineid" />
-          </Key>
-          <Property Name="Sodlineid" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
-          <Property Name="Sodid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Sodmaterielid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sodmatid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Sodspec" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sodamount" Type="Int32" Nullable="false" />
-          <Property Name="Sodpreprice" Type="Single" Nullable="false" />
-          <Property Name="Sodagio" Type="Int32" Nullable="false" />
-          <Property Name="Sodprice" Type="Single" Nullable="false" />
-          <Property Name="Sodsum" Type="Single" Nullable="false" />
-          <Property Name="Sodcess" Type="Int32" Nullable="false" />
-          <Property Name="Sodsumcess" Type="Single" Nullable="false" />
-          <Property Name="Sodsumprice" Type="Single" Nullable="false" />
-          <Property Name="Sodpreincomestorage" Type="DateTime" Nullable="false" />
-          <Property Name="Sodpresent" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="Sodorigintype" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Sodorigin" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Enables" Type="Int32" Nullable="false" />
-          <Property Name="Safetyone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Safetytwo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Extend0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="stockrecede">
           <Key>
             <PropertyRef Name="Recid" />
@@ -3082,6 +3023,67 @@
           <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="stockorderdetails">
+          <Key>
+            <PropertyRef Name="Sodlineid" />
+          </Key>
+          <Property Name="Sodlineid" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Sodid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Sodmaterielid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sodmatid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Sodspec" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sodamount" Type="Int32" Nullable="false" />
+          <Property Name="Sodpreprice" Type="Single" Nullable="false" />
+          <Property Name="Sodagio" Type="Int32" Nullable="false" />
+          <Property Name="Sodprice" Type="Single" Nullable="false" />
+          <Property Name="Sodsum" Type="Single" Nullable="false" />
+          <Property Name="Sodcess" Type="Int32" Nullable="false" />
+          <Property Name="Sodsumcess" Type="Single" Nullable="false" />
+          <Property Name="Sodsumprice" Type="Single" Nullable="false" />
+          <Property Name="Sodpreincomestorage" Type="DateTime" Nullable="false" />
+          <Property Name="Sodpresent" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Sodorigintype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Sodorigin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Enables" Type="Int32" />
+          <Property Name="Safetyone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Safetytwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Extend0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="stockorder">
+          <Key>
+            <PropertyRef Name="Stoid" />
+          </Key>
+          <Property Name="Stoid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Stodate" Type="DateTime" Nullable="false" />
+          <Property Name="Stopeoname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stopeoid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stopeoadress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stoistax" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Stostate" Type="Int32" Nullable="false" />
+          <Property Name="Stoadress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stoempstock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stopersonid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stodept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stodeptid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stoempname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stoempcheck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stomark" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Checkstate" Type="Int32" Nullable="false" />
+          <Property Name="Stockordername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Enables" Type="Int32" />
+          <Property Name="Safetyone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Safetytwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Extend0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Extend5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -4393,68 +4395,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="stockorder">
-            <EntityTypeMapping TypeName="erpModel.stockorder">
-              <MappingFragment StoreEntitySet="stockorder">
-                <ScalarProperty Name="Extend4" ColumnName="Extend4" />
-                <ScalarProperty Name="Extend3" ColumnName="Extend3" />
-                <ScalarProperty Name="Extend2" ColumnName="Extend2" />
-                <ScalarProperty Name="Extend1" ColumnName="Extend1" />
-                <ScalarProperty Name="Extend0" ColumnName="Extend0" />
-                <ScalarProperty Name="Safetytwo" ColumnName="Safetytwo" />
-                <ScalarProperty Name="Safetyone" ColumnName="Safetyone" />
-                <ScalarProperty Name="Enables" ColumnName="Enables" />
-                <ScalarProperty Name="Stockordername" ColumnName="Stockordername" />
-                <ScalarProperty Name="Checkstate" ColumnName="Checkstate" />
-                <ScalarProperty Name="Stomark" ColumnName="Stomark" />
-                <ScalarProperty Name="Stoempcheck" ColumnName="Stoempcheck" />
-                <ScalarProperty Name="Stoempname" ColumnName="Stoempname" />
-                <ScalarProperty Name="Stodeptid" ColumnName="Stodeptid" />
-                <ScalarProperty Name="Stodept" ColumnName="Stodept" />
-                <ScalarProperty Name="Stopersonid" ColumnName="Stopersonid" />
-                <ScalarProperty Name="Stoempstock" ColumnName="Stoempstock" />
-                <ScalarProperty Name="Stoadress" ColumnName="Stoadress" />
-                <ScalarProperty Name="Stostate" ColumnName="Stostate" />
-                <ScalarProperty Name="Stoistax" ColumnName="Stoistax" />
-                <ScalarProperty Name="Stopeoadress" ColumnName="Stopeoadress" />
-                <ScalarProperty Name="Stopeoid" ColumnName="Stopeoid" />
-                <ScalarProperty Name="Stopeoname" ColumnName="Stopeoname" />
-                <ScalarProperty Name="Stodate" ColumnName="Stodate" />
-                <ScalarProperty Name="Stoid" ColumnName="Stoid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="stockorderdetails">
-            <EntityTypeMapping TypeName="erpModel.stockorderdetails">
-              <MappingFragment StoreEntitySet="stockorderdetails">
-                <ScalarProperty Name="Extend4" ColumnName="Extend4" />
-                <ScalarProperty Name="Extend3" ColumnName="Extend3" />
-                <ScalarProperty Name="Extend2" ColumnName="Extend2" />
-                <ScalarProperty Name="Extend1" ColumnName="Extend1" />
-                <ScalarProperty Name="Extend0" ColumnName="Extend0" />
-                <ScalarProperty Name="Safetytwo" ColumnName="Safetytwo" />
-                <ScalarProperty Name="Safetyone" ColumnName="Safetyone" />
-                <ScalarProperty Name="Enables" ColumnName="Enables" />
-                <ScalarProperty Name="Sodorigin" ColumnName="Sodorigin" />
-                <ScalarProperty Name="Sodorigintype" ColumnName="Sodorigintype" />
-                <ScalarProperty Name="Sodpresent" ColumnName="Sodpresent" />
-                <ScalarProperty Name="Sodpreincomestorage" ColumnName="Sodpreincomestorage" />
-                <ScalarProperty Name="Sodsumprice" ColumnName="Sodsumprice" />
-                <ScalarProperty Name="Sodsumcess" ColumnName="Sodsumcess" />
-                <ScalarProperty Name="Sodcess" ColumnName="Sodcess" />
-                <ScalarProperty Name="Sodsum" ColumnName="Sodsum" />
-                <ScalarProperty Name="Sodprice" ColumnName="Sodprice" />
-                <ScalarProperty Name="Sodagio" ColumnName="Sodagio" />
-                <ScalarProperty Name="Sodpreprice" ColumnName="Sodpreprice" />
-                <ScalarProperty Name="Sodamount" ColumnName="Sodamount" />
-                <ScalarProperty Name="Sodspec" ColumnName="Sodspec" />
-                <ScalarProperty Name="Sodmatid" ColumnName="Sodmatid" />
-                <ScalarProperty Name="Sodmaterielid" ColumnName="Sodmaterielid" />
-                <ScalarProperty Name="Sodid" ColumnName="Sodid" />
-                <ScalarProperty Name="Sodlineid" ColumnName="Sodlineid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="stockrecede">
             <EntityTypeMapping TypeName="erpModel.stockrecede">
               <MappingFragment StoreEntitySet="stockrecede">
@@ -4619,6 +4559,69 @@
                 <ScalarProperty Name="Advid" ColumnName="Advid" />
                 <ScalarProperty Name="Payid" ColumnName="Payid" />
                 <ScalarProperty Name="Takid" ColumnName="Takid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stockorderdetails">
+            <EntityTypeMapping TypeName="erpModel.stockorderdetails">
+              <MappingFragment StoreEntitySet="stockorderdetails">
+                <ScalarProperty Name="Extend4" ColumnName="Extend4" />
+                <ScalarProperty Name="Extend3" ColumnName="Extend3" />
+                <ScalarProperty Name="Extend2" ColumnName="Extend2" />
+                <ScalarProperty Name="Extend1" ColumnName="Extend1" />
+                <ScalarProperty Name="Extend0" ColumnName="Extend0" />
+                <ScalarProperty Name="Safetytwo" ColumnName="Safetytwo" />
+                <ScalarProperty Name="Safetyone" ColumnName="Safetyone" />
+                <ScalarProperty Name="Enables" ColumnName="Enables" />
+                <ScalarProperty Name="Sodorigin" ColumnName="Sodorigin" />
+                <ScalarProperty Name="Sodorigintype" ColumnName="Sodorigintype" />
+                <ScalarProperty Name="Sodpresent" ColumnName="Sodpresent" />
+                <ScalarProperty Name="Sodpreincomestorage" ColumnName="Sodpreincomestorage" />
+                <ScalarProperty Name="Sodsumprice" ColumnName="Sodsumprice" />
+                <ScalarProperty Name="Sodsumcess" ColumnName="Sodsumcess" />
+                <ScalarProperty Name="Sodcess" ColumnName="Sodcess" />
+                <ScalarProperty Name="Sodsum" ColumnName="Sodsum" />
+                <ScalarProperty Name="Sodprice" ColumnName="Sodprice" />
+                <ScalarProperty Name="Sodagio" ColumnName="Sodagio" />
+                <ScalarProperty Name="Sodpreprice" ColumnName="Sodpreprice" />
+                <ScalarProperty Name="Sodamount" ColumnName="Sodamount" />
+                <ScalarProperty Name="Sodspec" ColumnName="Sodspec" />
+                <ScalarProperty Name="Sodmatid" ColumnName="Sodmatid" />
+                <ScalarProperty Name="Sodmaterielid" ColumnName="Sodmaterielid" />
+                <ScalarProperty Name="Sodid" ColumnName="Sodid" />
+                <ScalarProperty Name="Sodlineid" ColumnName="Sodlineid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stockorder">
+            <EntityTypeMapping TypeName="erpModel.stockorder">
+              <MappingFragment StoreEntitySet="stockorder">
+                <ScalarProperty Name="Extend5" ColumnName="Extend5" />
+                <ScalarProperty Name="Extend4" ColumnName="Extend4" />
+                <ScalarProperty Name="Extend3" ColumnName="Extend3" />
+                <ScalarProperty Name="Extend2" ColumnName="Extend2" />
+                <ScalarProperty Name="Extend1" ColumnName="Extend1" />
+                <ScalarProperty Name="Extend0" ColumnName="Extend0" />
+                <ScalarProperty Name="Safetytwo" ColumnName="Safetytwo" />
+                <ScalarProperty Name="Safetyone" ColumnName="Safetyone" />
+                <ScalarProperty Name="Enables" ColumnName="Enables" />
+                <ScalarProperty Name="Stockordername" ColumnName="Stockordername" />
+                <ScalarProperty Name="Checkstate" ColumnName="Checkstate" />
+                <ScalarProperty Name="Stomark" ColumnName="Stomark" />
+                <ScalarProperty Name="Stoempcheck" ColumnName="Stoempcheck" />
+                <ScalarProperty Name="Stoempname" ColumnName="Stoempname" />
+                <ScalarProperty Name="Stodeptid" ColumnName="Stodeptid" />
+                <ScalarProperty Name="Stodept" ColumnName="Stodept" />
+                <ScalarProperty Name="Stopersonid" ColumnName="Stopersonid" />
+                <ScalarProperty Name="Stoempstock" ColumnName="Stoempstock" />
+                <ScalarProperty Name="Stoadress" ColumnName="Stoadress" />
+                <ScalarProperty Name="Stostate" ColumnName="Stostate" />
+                <ScalarProperty Name="Stoistax" ColumnName="Stoistax" />
+                <ScalarProperty Name="Stopeoadress" ColumnName="Stopeoadress" />
+                <ScalarProperty Name="Stopeoid" ColumnName="Stopeoid" />
+                <ScalarProperty Name="Stopeoname" ColumnName="Stopeoname" />
+                <ScalarProperty Name="Stodate" ColumnName="Stodate" />
+                <ScalarProperty Name="Stoid" ColumnName="Stoid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

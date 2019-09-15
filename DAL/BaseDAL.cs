@@ -4,7 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using IDAL;
-
+using EntityFramework.Extensions;
 namespace DAL
 {
     public partial class BaseDAL<T> : IBaseDAL<T> where T : class, new()
@@ -35,12 +35,35 @@ namespace DAL
         {
            
                 if (isAsc)
-                    return db.Set<T>().Where(WhereLambda).OrderBy(OrderByLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+                    return db.Set<T>().Where(WhereLambda).OrderBy(OrderByLambda).Take((pageIndex - 1) * pageSize).Skip(pageSize);
                 else
                     return db.Set<T>().Where(WhereLambda).OrderByDescending(OrderByLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize);
             
               
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="type"></typeparam>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="isAsc"></param>
+        /// <param name="OrderByLambda"></param>
+        /// <param name="WhereLambda"></param>
+        /// <param name="pages"></param>
+        /// <param name="total"></param>
+        /// <returns></returns>
+        public IQueryable<T> ListModelsByPage<type>(int pageSize, int pageIndex, bool isAsc, Expression<Func<T, type>> OrderByLambda, Expression<Func<T, bool>> WhereLambda,out int total)
+        {
+            IQueryable<T> list = db.Set<T>().Where(WhereLambda);
+
+            var q1 = list.FutureCount();
+            var q2 = isAsc ? list.OrderBy(OrderByLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize) : list.OrderByDescending(OrderByLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+
+            total = q1.Value;
+            return q2;
         }
 
 

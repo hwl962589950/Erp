@@ -61,8 +61,6 @@
         <EntityTypeShape EntityType="erpModel.stockapportion" Width="1.5" PointX="24.75" PointY="7.75" />
         <EntityTypeShape EntityType="erpModel.stockinquire" Width="1.5" PointX="24.75" PointY="12.75" />
         <EntityTypeShape EntityType="erpModel.stockinquiredetails" Width="1.5" PointX="18.75" PointY="24.75" />
-        <EntityTypeShape EntityType="erpModel.stockorder" Width="1.5" PointX="24.75" PointY="19.75" />
-        <EntityTypeShape EntityType="erpModel.stockorderdetails" Width="1.5" PointX="2.75" PointY="25.75" />
         <EntityTypeShape EntityType="erpModel.stockrecede" Width="1.5" PointX="26.75" PointY="0.75" />
         <EntityTypeShape EntityType="erpModel.stockstoragedetails" Width="1.5" PointX="4.75" PointY="26.75" />
         <EntityTypeShape EntityType="erpModel.stockstoragetable" Width="1.5" PointX="26.75" PointY="7.75" />
@@ -70,6 +68,8 @@
         <EntityTypeShape EntityType="erpModel.supplieraddress" Width="1.5" PointX="26.75" PointY="19.75" />
         <EntityTypeShape EntityType="erpModel.takeadvancedetails" Width="1.5" PointX="26.75" PointY="23.75" />
         <EntityTypeShape EntityType="erpModel.takeadvancegatherdetails" Width="1.5" PointX="6.75" PointY="27.75" />
+        <EntityTypeShape EntityType="erpModel.stockorderdetails" Width="1.5" PointX="15.375" PointY="27.75" />
+        <EntityTypeShape EntityType="erpModel.stockorder" Width="1.5" PointX="25.375" PointY="27.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

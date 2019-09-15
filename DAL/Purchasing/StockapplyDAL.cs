@@ -18,12 +18,10 @@ namespace DAL.Purchasing
             stockapplydetails.ForEach(s => base.db.Set<stockapplydetails>().Add(s));
         }
 
-        public void Update(stockapply sto, List<stockapplydetails> stockapplydetails)
+        public void Update(string id, List<stockapplydetails> stockapplydetails)
         {
-            //修改请购单
-            base.db.Set<stockapply>().Attach(sto);
             string sql = "DELETE FROM stockapplydetails WHERE Appid=@Appid";
-            base.db.Database.ExecuteSqlCommand(sql, new MySqlParameter("@Appid",sto.Appid));
+            base.db.Database.ExecuteSqlCommand(sql, new MySqlParameter("@Appid",id));
             //再次新增进去
             stockapplydetails.ForEach(s => base.db.Set<stockapplydetails>().Add(s));
         }
